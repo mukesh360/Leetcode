@@ -15,4 +15,19 @@ class Solution(object):
         return ls
 
 
-        
+#better solution 
+class Solution(object):
+    def majorityElement(self, arr):
+        ls = []
+        mini = len(arr) // 3 + 1   
+        hmap = {}
+
+        for i in range(len(arr)):
+           
+            hmap[arr[i]] = hmap.get(arr[i], 0) + 1  
+
+           
+            if hmap[arr[i]] == mini:
+                ls.append(arr[i])
+
+        return ls
