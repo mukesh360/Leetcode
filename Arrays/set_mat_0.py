@@ -26,7 +26,6 @@ class Solution(object):
             for j in range(cols):
                 if arr[i][j] == -1:
                     arr[i][j] = 0
-
-
+                    
 
     
