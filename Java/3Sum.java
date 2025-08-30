@@ -45,7 +45,7 @@ class Solution {
     }
 }
 
-// optimised 
+// optimised  using two pointer
 class Solution {
     public List<List<Integer>> threeSum(int[] arr) {
         List<List<Integer>> triplet = new ArrayList<>();
