@@ -43,3 +43,43 @@ class Solution {
      return ans;   
     }
 }
+////optimized
+class Solution {
+
+    private int max(int[] piles) {
+        int maxNum = 0;
+        for (int p : piles) {
+            if (p > maxNum) maxNum = p;
+        }
+        return maxNum;
+    }
+
+    // calculate hours needed at given speed
+    private long calculateHours(int[] arr, int speed, long limit) {
+        long totalHours = 0;
+        for(int i = 0; i < arr.length; i++) {
+            // ceil(p / speed) using integer math
+            totalHours += (arr[i] + (long) speed - 1) / speed;
+            if (totalHours > limit) return totalHours; // early stop
+        }
+        return totalHours;
+    }
+
+    public int minEatingSpeed(int[] piles, int h) {
+        int low = 1, high = max(piles);
+        int ans = high;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            long hours = calculateHours(piles, mid, h);
+
+            if (hours <= h) {
+                ans = mid;      
+                high = mid - 1;
+            } else {
+                low = mid + 1; 
+            }
+        }
+        return ans;
+    }
+}
