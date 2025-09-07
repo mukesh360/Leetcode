@@ -51,3 +51,56 @@ class Solution {
     }
 }
 // optimal
+class Solution {
+    private int max(int[] arr){
+        int maxNum = Integer.MIN_VALUE;
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > maxNum) maxNum = arr[i];
+        }
+        return maxNum;
+    }
+
+    private int sum(int[] arr){
+        int total = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            total += arr[i];
+        }
+        return total;
+    }
+
+    private int noOfDays(int[] arr, int capacity){
+        int days = 1;
+        int load = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            if(load + arr[i] > capacity){
+                days += 1;
+                load = arr[i];
+            }
+            else load += arr[i];
+        }
+        return days;
+    }
+
+    public int shipWithinDays(int[] weights, int days) {
+
+        int high = sum(weights);
+        int low = max(weights);
+        int ans = 0;
+        while(low <= high){
+            int mid = (low + high) / 2;
+            
+            int daysRequired = noOfDays(weights , mid);
+
+            if(daysRequired <= days){
+                ans = mid;
+                high = mid - 1;
+            }
+            else low = mid + 1;
+        }
+        return ans;
+        
+    }
+}
