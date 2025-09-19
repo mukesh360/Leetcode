@@ -47,3 +47,16 @@ class Solution {
     
     }
 }
+///Here, n = 3 (3 rows).
+
+// Dry Run of the Loop
+
+// Iteration 1: (i = 0)
+
+// matrix[0] = [1, 4, 7]
+
+// Call reverseRow([1, 4, 7])
+
+// After reversal → [7, 4, 1]
+
+// Matrix becomes:
