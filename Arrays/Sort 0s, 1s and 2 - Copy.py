@@ -10,7 +10,6 @@ class Solution(object):
 # | -------------------- | ------------------------------- |
 # | **Time Complexity**  | O(n)                            |
 # | **Space Complexity** | O(1)                            |
-# | **Stable Sort?**     | ❌ (Not guaranteed)             |
 # | **In-place?**        | ✅ (Yes, modifies input array)  |
 
 class Solution(object):

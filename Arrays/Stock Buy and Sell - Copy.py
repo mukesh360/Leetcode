@@ -14,4 +14,30 @@ class Solution(object):
             if profit > max_profit:
                 max_profit = profit
         return max_profit
+    
+    
 # optimised
+# | Type             | Complexity |
+# | ---------------- | ---------- |
+# | Time Complexity  | O(n)       |
+# | Space Complexity | O(1)       |
+class Solution(object):
+    def maxProfit(self, arr):
+        profit = 0
+        minimum = arr[0]
+
+        for i in range(1,len(arr)):
+            cost = arr[i] - minimum
+            profit = max(cost ,profit)
+            minimum = min(arr[i], minimum)
+        return profit
+
+ 
+          
+
+
+
+
+        
+        
+        
