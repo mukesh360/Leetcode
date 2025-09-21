@@ -37,7 +37,7 @@ class Solution {
     }
     
 
-    void mergeSort(int arr[], int l, int r) {
+    void mergeSort(int arr[], int l,  int r) {
         
         mS(arr, l, r);
         
