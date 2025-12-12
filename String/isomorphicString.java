@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public boolean isIsomorphic(String s, String t) {
         
@@ -28,3 +29,10 @@ class Solution {
     return true;
     }
 }
+=======
+package String;
+
+public class isomorphicString {
+    
+}
+>>>>>>> 6b2b00d38dc54d34649d4b1c13b260d4cd5bccc8
