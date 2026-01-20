@@ -1,4 +1,4 @@
-class Solution {
+    class Solution {
     int maxSubarraySum(int[] arr) {
         // Code here
         int total = 0;

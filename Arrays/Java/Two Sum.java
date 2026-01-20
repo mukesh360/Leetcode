@@ -12,10 +12,9 @@ class Solution {
         
     }
 }
-//
+/////
 class Solution {
     public int[] twoSum(int[] arr, int target) {
-
         Map<Integer,Integer> set = new HashMap<>();
 
         for(int i = 0; i < arr.length; i++){

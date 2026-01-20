@@ -1,4 +1,4 @@
-class Solution {
+    class Solution {
     public void sortColors(int[] arr) {
         int count_0 = 0;
         int count_1 = 0;        
@@ -12,9 +12,7 @@ class Solution {
             else if(arr[i] ==1){
                 count_1++;
             }
-            // else{
-            //     count_2++;
-            // }
+           
         }
 
         for(int i = 0;i < arr.length;i++){
