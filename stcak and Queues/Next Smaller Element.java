@@ -1,8 +1,6 @@
-import java.util.*;
-
 class Solution {
-    public ArrayList<Integer> nextLargerElement(int[] arr) {
-
+    static ArrayList<Integer> nextSmallerEle(int[] arr) {
+        // code here
         int n = arr.length;
         int[] nge = new int[n];
 
@@ -10,7 +8,7 @@ class Solution {
 
         for(int i = n - 1; i >= 0; i--){
 
-            while(!st.isEmpty() && st.peek() <= arr[i]){
+            while(!st.isEmpty() && st.peek() >= arr[i]){
                 st.pop();
             }
 
