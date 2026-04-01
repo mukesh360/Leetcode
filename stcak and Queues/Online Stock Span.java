@@ -19,4 +19,4 @@ class StockSpanner {
 
         return span;
     }
-}
+} 
